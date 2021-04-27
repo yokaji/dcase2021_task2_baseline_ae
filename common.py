@@ -276,6 +276,8 @@ def file_list_generator(target_dir,
         labels = np.concatenate((normal_labels, anomaly_labels), axis=0)
         
         logger.info("#files : {num}".format(num=len(files)))
+        logger.info("#normal files : {}".format(len(normal_files)))
+        logger.info("#anomaly files : {}".format(len(anomaly_files)))
         if len(files) == 0:
             logger.exception("no_wav_file!!")
         print("\n========================================")
